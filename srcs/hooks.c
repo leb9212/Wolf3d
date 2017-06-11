@@ -6,7 +6,7 @@
 /*   By: elee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/30 22:32:56 by elee              #+#    #+#             */
-/*   Updated: 2017/06/06 13:20:44 by elee             ###   ########.fr       */
+/*   Updated: 2017/06/11 16:06:30 by elee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static void	key_left_right(int key, t_env *env)
 int			key_hook(int key, t_env *env)
 {
 	(key == KEY_ESC) ? exit(0) : 0;
-	key_up_down(key, env);
-	key_left_right(key, env);
+	(key == KEY_UP || key == KEY_DOWN) ? key_up_down(key, env) : 0;
+	(key == KEY_LEFT || key == KEY_RIGHT) ? key_left_right(key, env) : 0;
 	return (0);
 }
