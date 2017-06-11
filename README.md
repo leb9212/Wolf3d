@@ -10,4 +10,4 @@
 
 ### Images
 
-![Map]http://i.imgur.com/diT0RRz.png
+![Map](http://i.imgur.com/diT0RRz.png)
